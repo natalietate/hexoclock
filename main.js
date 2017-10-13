@@ -2,13 +2,20 @@ var clock = document.querySelector('#clock');
 
 function logTime() {
   var time = new Date();
-  var hours = time.getHours() > 9 ? time.getHours() : '0' + time.getHours();
-  var minutes = time.getMinutes() > 9 ? time.getMinutes() : '0' + time.getMinutes();
-  var seconds = time.getSeconds() > 9 ? time.getSeconds() : '0' + time.getSeconds();
+
+  var hour = time.getHours();
+  var minute = time.getMinutes();
+  var second = time.getSeconds();
+  var amPm = "AM";
+  if (hour > 11) { amPm = "PM"; }
+  if (hour > 12) { hour = hour - 12; }
+  if (hour == 0) { hour = 12; }
+  if (hour < 10) { hour = "0" + hour; }
+  if (minute < 10) { minute = "0" + minute; }
+  if (second < 10)  { second = "0" + second; }
 
   // displays the time on the page
-  clock.innerHTML = hours + ':' + minutes + ':' + seconds;
-
+  clock.innerHTML = hour + ':' + minute + ':' + second;
   // takes the time and turns it into a string which is used for the background color
   var str = clock.innerHTML;
   str = str.replace(/:/g, '');
