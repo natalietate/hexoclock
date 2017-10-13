@@ -6,5 +6,15 @@
 #clock {
   color: white;
   text-align: center;
-  font-family: 'Baloo', cursive;
+  font-family: 'Gruppo', cursive;
+  font-size: 6em;
+}
+
+.clock-main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  top: calc(50vh - 100px);
 }
