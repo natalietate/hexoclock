@@ -1,0 +1,9 @@
+* {
+  /* background-color: rgba(209, 193, 193, 0.5); */
+  /* for debugging */
+}
+
+#clock {
+  color: white;
+  text-align: center;
+}
